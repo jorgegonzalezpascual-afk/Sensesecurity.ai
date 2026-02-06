@@ -5,35 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sensesecurity.ai | Tu Guardián Inteligente</title>
     <style>
-        :root { --blue: #00d4ff; --dark: #0a0a0a; --grey: #1a1a1a; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--dark); color: white; margin: 0; display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; }
-        .container { max-width: 600px; padding: 20px; }
+        :root { --blue: #00d4ff; --dark: #0a0a0a; --grey: #1a1a1a; --red: #FF3B30; }
+        
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: var(--dark); color: white; margin: 0; text-align: center; }
+        
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        
+        /* Header */
         .logo { width: 100px; border-radius: 20px; margin-bottom: 20px; box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
-        h1 { color: var(--blue); font-size: 2.5rem; margin: 10px 0; }
-        p { color: #ccc; line-height: 1.6; font-size: 1.1rem; }
-        form { background: var(--grey); padding: 30px; border-radius: 15px; margin-top: 30px; border: 1px solid #333; }
-        input[type="email"] { width: 80%; padding: 12px; border-radius: 5px; border: none; margin-bottom: 15px; outline: none; }
-        button { background-color: var(--blue); color: black; padding: 12px 30px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s; }
-        button:hover { transform: scale(1.05); background-color: #00b8e6; }
-        footer { margin-top: 50px; font-size: 0.8rem; color: #555; }
+        h1 { color: var(--blue); font-size: 3rem; margin: 10px 0; }
+        .hero-p { font-size: 1.3rem; color: #ccc; max-width: 700px; margin: 0 auto 40px; }
+
+        /* Sección de App (Tus diseños de Figma) */
+        .app-showcase { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin: 60px 0; }
+        .app-card { max-width: 280px; transition: transform 0.3s; }
+        .app-card:hover { transform: translateY(-10px); }
+        .app-card img { width: 100%; border-radius: 30px; border: 1px solid #333; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+        .app-card h3 { margin-top: 20px; font-size: 1.5rem; }
+        .app-card p { font-size: 0.95rem; color: #888; line-height: 1.4; }
+
+        /* Formulario */
+        .cta-box { background: var(--grey); padding: 40px; border-radius: 20px; border: 1px solid #333; margin-top: 60px; }
+        .cta-box h2 { color: var(--blue); margin-top: 0; }
+        input[type="email"] { width: 70%; padding: 15px; border-radius: 8px; border: none; margin-bottom: 20px; font-size: 1rem; outline: none; }
+        button { background-color: var(--blue); color: black; padding: 15px 40px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1rem; transition: 0.3s; }
+        button:hover { background-color: #00b8e6; transform: scale(1.05); }
+
+        footer { margin-top: 80px; padding-bottom: 40px; color: #555; font-size: 0.9rem; }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <img src="branding/logo.jpg" alt="Sensesecurity Logo" class="logo">
+        <img src="branding/logo.png" alt="Sensesecurity Logo" class="logo">
         <h1>Sensesecurity.ai</h1>
-        <p>No vuelvas a correr con miedo. Nuestra IA monitoriza tu pulso y seguridad en tiempo real por las calles de Madrid.</p>
-        
-        <form action="https://formspree.io/f/mykdgagb" method="POST">
-            <p><strong>¿Quieres probar la Beta gratis?</strong></p>
-            <input type="email" name="email" placeholder="Tu correo electrónico" required>
-            <br>
-            <button type="submit">RESERVAR MI PLAZA</button>
-        </form>
+        <p class="hero-p">No vuelvas a correr con miedo. Nuestra IA monitoriza tu seguridad en tiempo real para que tú solo te preocupes de tu ritmo.</p>
+
+        <div class="app-showcase">
+            <div class="app-card">
+                <img src="branding/app-normal-state.png" alt="Estado Normal">
+                <h3 style="color: var(--blue);">Modo Guardián</h3>
+                <p>Monitorización inteligente de tus constantes mientras entrenas.</p>
+            </div>
+            <div class="app-card">
+                <img src="branding/app-alert-state.png" alt="Estado Alerta">
+                <h3 style="color: var(--red);">Alerta Crítica</h3>
+                <p>Detección de accidentes y aviso inmediato a tus contactos.</p>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <h2>Sé el primero en probar la Beta</h2>
+            <p>Estamos lanzando en Madrid este mes. Apúntate para obtener acceso prioritario.</p>
+            
+            <form action="https://formspree.io/f/mykdgagb" method="POST">
+                <input type="email" name="email" placeholder="Tu mejor correo..." required>
+                <br>
+                <button type="submit">RESERVAR MI PLAZA</button>
+            </form>
+        </div>
 
         <footer>
-            &copy; 2024 Sensesecurity.ai - Made in Madrid with 💙 and AI.
+            &copy; 2024 Sensesecurity.ai | Diseñado para los runners de Madrid Río, Retiro y Casa de Campo.
         </footer>
     </div>
+
 </body>
 </html>
+
+
+
+

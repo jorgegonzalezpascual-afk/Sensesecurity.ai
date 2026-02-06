@@ -5,17 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sensesecurity.ai | Tu Guardián Inteligente</title>
     <style>
-        body { font-family: 'Arial', sans-serif; background-color: #0a0a0a; color: white; text-align: center; padding: 50px; }
-        h1 { color: #00d4ff; font-size: 3rem; }
-        p { font-size: 1.2rem; color: #ccc; }
-        .btn { background-color: #00d4ff; color: black; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        :root { --blue: #00d4ff; --dark: #0a0a0a; --grey: #1a1a1a; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--dark); color: white; margin: 0; display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; }
+        .container { max-width: 600px; padding: 20px; }
+        .logo { width: 100px; border-radius: 20px; margin-bottom: 20px; box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
+        h1 { color: var(--blue); font-size: 2.5rem; margin: 10px 0; }
+        p { color: #ccc; line-height: 1.6; font-size: 1.1rem; }
+        form { background: var(--grey); padding: 30px; border-radius: 15px; margin-top: 30px; border: 1px solid #333; }
+        input[type="email"] { width: 80%; padding: 12px; border-radius: 5px; border: none; margin-bottom: 15px; outline: none; }
+        button { background-color: var(--blue); color: black; padding: 12px 30px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        button:hover { transform: scale(1.05); background-color: #00b8e6; }
+        footer { margin-top: 50px; font-size: 0.8rem; color: #555; }
     </style>
 </head>
 <body>
-    <img src="branding/logo.jpg" alt="Sensesecurity Logo" style="width: 150px; height: auto; margin-bottom: 20px;">
-    <h1>Sensesecurity.ai</h1>
-    <p>No corras solo. La IA que cuida de ti en cada zancada por Madrid.</p>
-    <br><br>
-    <a href="#" class="btn">PRÓXIMAMENTE - ÚNETE A LA BETA</a>
+    <div class="container">
+        <img src="branding/logo.png" alt="Sensesecurity Logo" class="logo">
+        <h1>Sensesecurity.ai</h1>
+        <p>No vuelvas a correr con miedo. Nuestra IA monitoriza tu pulso y seguridad en tiempo real por las calles de Madrid.</p>
+        
+        <form action="https://formspree.io/f/mykdgagb" method="POST">
+            <p><strong>¿Quieres probar la Beta gratis?</strong></p>
+            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+            <br>
+            <button type="submit">RESERVAR MI PLAZA</button>
+        </form>
+
+        <footer>
+            &copy; 2024 Sensesecurity.ai - Made in Madrid with 💙 and AI.
+        </footer>
+    </div>
 </body>
 </html>
